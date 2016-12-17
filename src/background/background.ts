@@ -1,8 +1,8 @@
 
 function UnmarshalMessagePayload(msg: any) {
-    // nested payload json is base64-encoded
-    msg.payload = JSON.parse(atob(msg.payload));
-    return msg
+  // nested payload json is base64-encoded
+  msg.payload = JSON.parse(atob(msg.payload));
+  return msg
 }
 
 window.onload = function(event :any) {
