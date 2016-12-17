@@ -7,7 +7,7 @@ const webpack = require('webpack');
 
 const config = {
   entry: {
-    inject: './src/inject/inject.ts',
+    inject: './src/inject/inject.tsx',
     background: './src/background/background.ts'
   },
 
@@ -24,10 +24,6 @@ const config = {
 
   module: {
     loaders: [
-      //{
-      //  test: /\.(js)$/,
-      //  loader: 'babel-loader'
-      //},
       {
         test: /\.(ts|tsx)$/,
         loader: "awesome-typescript-loader"
@@ -41,13 +37,13 @@ const config = {
     //]
   },
 
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  },
+  //externals: {
+  //  "react": "React",
+  //  "react-dom": "ReactDOM"
+  //},
 
   plugins: [
-    //new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist']),
 
     new CopyWebpackPlugin([
       { from: 'manifest.json' },
