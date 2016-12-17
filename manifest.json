@@ -21,7 +21,7 @@
     "nativeMessaging"
   ],
   "background": {
-    "scripts": ["src/background/background.js"]
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
@@ -29,7 +29,7 @@
         "https://*/*"
       ],
       "css": [
-        "src/inject/inject.css"
+        "inject.css"
       ]
     },
     {
@@ -37,8 +37,7 @@
         "https://*/*"
       ],
       "js": [
-        "vendor/jquery/jquery.min.js",
-        "src/inject/inject.js"
+        "inject.js"
       ]
     }
   ]
